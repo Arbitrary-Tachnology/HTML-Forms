@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #050301;
+        }
+
+        .form-container {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 50px rgba(106, 13, 173, 1);
+        }
+        
+        h1 {
+            color: #a3a3a3;
+            text-align: center;
+        }
+
+        h2,p {
+            color: #a3a3a3;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #a3a3a3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .radio-group label,
+        .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            color: white;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #551a8b;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #6a0dad;
+        }
+
+        .required {
+            color: red;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="radio"] {
+            background-color: #595959;
+            color: #c5c6c7;
+            border-color: #676765;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            accent-color: #6a0dad;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registration Form</h1>
+        <form action="#" method="POST">
+            <!-- ========== PERSONAL INFORMATION SECTION ========== -->
+        <section class="personal-information">
+        <h2>Personal Information</h2>
+            
+            
+            <!-- Create a label and input for First Name -->
+            <label for="firstName">First Name<span class="required">*</span></label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <!-- TODO: Create a label and input for Last Name -->
+            <label for="lastName">Last Name<span class="required">*</span></label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <!-- TODO: Create a label and input for Street Address -->
+            <label for="streetAddress">Street Address<span class="required">*</span></label>
+            <input type="text" id="streetAddress" name="streetAddress" required>
+            
+            <!-- TODO: Create a label and input for City -->
+            <label for="city">City<span class="required`">*</span></label>
+            <input type="text" id="city" name="city" required>
+            
+            <!-- TODO: Create a label and input for State -->
+            <label for="state">State<span class="required">*</span></label>
+            <input type="text" id="state" name="state" required>
+            
+            
+            <!-- TODO: Create a label and input for Zip Code -->
+            <label for="zipCode">Zip Code<span class="required">*</span></label>
+            <input type="text" id="zipCode" name="zipCode" required>
+            
+            
+            <!-- TODO: Create a label and input for Email Address -->
+            <label for="state">Email Address<span class="required">*</span></label>
+            <input type="email" id="emailAddress" name="emailAddress" required>
+            <!-- Remember: use type="email" for email inputs -->
+            
+            
+            
+            <!-- TODO: Create a label and input for Phone Number -->
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            <!-- Remember: use type="tel" for phone inputs -->
+        </section>    
+        <!-- ========== FAVORITE COLORS SECTION ========== -->
+        <section class="favorite-colors">
+            <!-- TODO: Add an h2 heading with the text "Favorite Colors" -->
+             <h2>Favorite Colors</h2>
+            
+            
+            <!-- TODO: Add a paragraph with instructions: "Select all colors you like (you may choose multiple):" -->
+            <p>Select all colors you like (you may choose multiple):</p>
+            
+            <!-- TODO: Create checkboxes for Blue, Red, Green, Yellow, Purple, Orange, and Indigo -->
+            <div class="checkbox-group">
+                <input type="checkbox" id="blue" name="favoriteColors" value="blue">
+                <label for="blue">Blue</label>
+                <br>
+
+                <input type="checkbox" id="red" name="favoriteColors" value="red">
+                <label for="red">Red</label>
+                <br>
+
+                <input type="checkbox" id="green" name="favoriteColors" value="green">
+                <label for="green">Green</label>
+                <br>
+
+                <input type="checkbox" id="yellow" name="favoriteColors" value="yellow">
+                <label for="yellow">Yellow</label>
+                <br>
+
+                <input type="checkbox" id="purpl" name="favoriteColors" value="purple">
+                <label for="purple">Purple</label>
+                <br>
+
+                <input type="checkbox" id="orange" name="favoriteColors" value="orange">
+                <label for="orange">Orange</label>
+                <br>
+
+                <input type="checkbox" id="indigo" name="favoriteColors" value="indigo">
+                <label for="indigo">Indigo</label>
+            </div>
+            <!-- Remember: 
+                - All checkboxes should have type="checkbox"
+                - All checkboxes should have the SAME name (e.g., name="favoriteColors")
+                - Each checkbox needs a unique id
+                - Each checkbox needs a value attribute
+                - Each checkbox needs a label with a matching 'for' attribute
+                 - Blue
+                 - Red
+                 - Green
+                 - Yellow
+                 - Purple
+                 - Orange
+                 - Indigo 
+            -->
+            
+            <!-- Example for Blue (complete this, then create 6 more): -->
+            <!-- <input type="checkbox" id="colorBlue" name="favoriteColors" value="blue"> -->
+            <!-- <label for="colorBlue">Blue</label> -->
+            <!-- <br> -->
+        </section>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
+        <!-- ========== SCHOOL DISTRICT SECTION ========== -->
+        <section class="school-district">
+        <!-- TODO: Add an h2 heading with the text "Home School District" -->
+         <h2>Home School District</h2>
+
+        <!-- TODO: Add a paragraph with instructions: "Select your home school district (choose one):" -->
+        <p>Select your home school district (choose one)<span class="required">*</span></p>
+
+        <div class="radio-group">
+            <input type="radio" id="districtCanton" name="schoolDistrict" value="canton" required>
+            <label for="districtCanton">Canton</label>
+            <br>
+
+            <input type="radio" id="districtPotsdam" name="schoolDistrict" value="potsdam" required>
+            <label for="districtPotsdam">Potsdam</label>
+            <br>
+
+            <input type="radio" id="districtMassena" name="schoolDistrict" value="massena" required>
+            <label for="districtMassena">Massena</label>
+            <br>
+
+            <input type="radio" id="districtNorwoodNorfolk" name="schoolDistrict" value="norwood-norfolk" required>
+            <label for="districtNorwoodNorfolk">Norwood-Norfolk</label>
+            <br>
+
+            <input type="radio" id="districtParishville-Hopkinton" name="schoolDistrict" value="parishville-hopkinton" required>
+            <label for="districtParishville-Hopkinton">Parishville-Hopkinton</label>
+            <br>
+
+            <input type="radio" id="districtColtonPierrepont" name="schoolDistrict" value="colton-pierrepont" required>
+            <label for="districtColtonPierrepont">Colton-Pierrepont</label>
+            <br>
+
+            <input type="radio" id="districtBrasherFalls" name="schoolDistrict" value="brasherFalls" required>
+            <label for="districtBrasherFalls">Brasher Falls</label>
+        </div>
+        <!-- TODO: Create radio buttons for:
+             - Canton
+             - Potsdam
+             - Massena
+             - Norwood-Norfolk
+             - Parishville-Hopkinton
+             - Colton-Pierrepont
+             - Brasher Falls
+        -->
+        <!-- Remember: 
+             - All radio buttons should have type="radio"
+             - All radio buttons should have the SAME name (e.g., name="schoolDistrict")
+             - Each radio button needs a unique id
+             - Each radio button needs a value attribute
+             - Each radio button needs a label with a matching 'for' attribute
+        -->
+        
+        <!-- Example for Canton (complete this, then create 6 more): -->
+        <!-- <input type="radio" id="districtCanton" name="schoolDistrict" value="canton"> -->
+        <!-- <label for="districtCanton">Canton</label> -->
+        <!-- <br> -->
+        </section>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- ========== SUBMIT BUTTON ========== -->
+        <!-- TODO: Add some space with <br><br> -->
+        <br><br>
+        
+        <!-- TODO: Create a submit button -->
+        <!-- Use: <input type="submit" value="Submit Registration"> -->
+         <input type="submit" value="Submit Registration">
+        </form>
+    </div>
+</body>
+</html>
